@@ -1,0 +1,34 @@
+### GENERAL ###
+server:
+  port: 8080
+
+### Feign Config
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 50000
+        readTimeout: 50000
+        loggerLevel: full
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+logging:
+  level:
+    feign: DEBUG
+
+list:
+  products: "https://rgr3viiqdl8sikgv.public.blob.vercel-storage.com/produtos-mnboX5IPl6VgG390FECTKqHsD9SkLS.json"
+  client:
+    shopping: "https://rgr3viiqdl8sikgv.public.blob.vercel-storage.com/clientes-Vz1U6aR3GTsjb3W8BRJhcNKmA81pVh.json"
+
+spring:
+  devtools:
+    restart:
+      additional-exclude: org.springframework.boot.devtools.restart.RestartApplicationListener
+
